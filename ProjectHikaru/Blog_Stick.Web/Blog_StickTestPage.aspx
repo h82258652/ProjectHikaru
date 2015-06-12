@@ -63,7 +63,7 @@
         <div id="silverlightControlHost">
             <object width="160" height="250" data="data:application/x-silverlight-2," type="application/x-silverlight-2">                
                 <param name="source" value="ClientBin/Blog_Stick.xap" />
-                <param name="initparams" value="blogType=0"/>
+                <param name="initparams" value="blogType=1"/>
                 <param name="EnableHtmlAccess" value="true"/>
                 <param name="onError" value="onSilverlightError" />
                 <param name="background" value="white" />
