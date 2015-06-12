@@ -1,0 +1,122 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+             xmlns:local="clr-namespace:Blog_Stick"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Blog_Stick.HikkiMurmur"
+             Width="160"
+             Height="250">
+    <UserControl.Resources>
+        <Storyboard x:Name="DialogAnimate">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)"
+                                           Storyboard.TargetName="dialog">
+                <DiscreteDoubleKeyFrame KeyTime="0:0:1"
+                                        Value="0.284" />
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5"
+                                      Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseOut"
+                                  Amplitude="0.3" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)"
+                                           Storyboard.TargetName="dialog">
+                <DiscreteDoubleKeyFrame KeyTime="0:0:1"
+                                        Value="0.284" />
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5"
+                                      Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseOut"
+                                  Amplitude="0.3" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)"
+                                           Storyboard.TargetName="dialog">
+                <DiscreteDoubleKeyFrame KeyTime="0:0:1"
+                                        Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5"
+                                      Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseOut"
+                                  Amplitude="0.3" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
+                                           Storyboard.TargetName="dialog">
+                <DiscreteDoubleKeyFrame KeyTime="0:0:1"
+                                        Value="-26" />
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5"
+                                      Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseOut"
+                                  Amplitude="0.3" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
+                                           Storyboard.TargetName="dialog">
+                <EasingDoubleKeyFrame KeyTime="0"
+                                      Value="0" />
+                <DiscreteDoubleKeyFrame KeyTime="0:0:1"
+                                        Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5"
+                                      Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseOut"
+                                  Amplitude="0.3" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot"
+          Background="White">
+        <i:Interaction.Triggers>
+            <i:EventTrigger>
+                <ei:ControlStoryboardAction Storyboard="{StaticResource DialogAnimate}" />
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
+        <Image Margin="0"
+               Source="背景.jpg"
+               Stretch="Fill" />
+        <local:Speak x:Name="speak"
+                     Margin="0,0,-9,34"
+                     Height="201"
+                     VerticalAlignment="Bottom"
+                     Cursor="Hand"
+                     MouseLeftButtonDown="Speak_MouseLeftButtonDown" />
+        <local:Blink x:Name="blink"
+                     Margin="0,15,-9,34"
+                     HorizontalAlignment="Right"
+                     Width="169"
+                     Visibility="Collapsed"
+                     Cursor="Hand"
+                     MouseLeftButtonDown="Speak_MouseLeftButtonDown" />
+        <HyperlinkButton TargetName="_blank"
+                         IsTabStop="False"
+                         NavigateUri="http://www.microsoft.com/taiwan/silverlight"
+                         Margin="0,4,0,0"
+                         VerticalAlignment="Top"
+                         Width="76"
+                         HorizontalAlignment="Center">
+            <Image Height="25"
+                   Source="LOGO.png"
+                   Stretch="Fill" />
+        </HyperlinkButton>
+        <local:Dialog x:Name="dialog"
+                      Height="67"
+                      Margin="7,0,5,6"
+                      VerticalAlignment="Bottom"
+                      RenderTransformOrigin="0.5,0.5">
+            <local:Dialog.RenderTransform>
+                <CompositeTransform />
+            </local:Dialog.RenderTransform>
+        </local:Dialog>
+    </Grid>
+</UserControl>

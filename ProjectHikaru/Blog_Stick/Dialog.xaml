@@ -1,0 +1,18 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Blog_Stick.Dialog"
+             d:DesignWidth="148"
+             d:DesignHeight="67">
+    <Grid x:Name="LayoutRoot">
+        <Image Source="對話框.png"
+               Stretch="Fill" />
+        <TextBlock x:Name="HikkiSays"
+                   Margin="4,25,0,-1"
+                   TextWrapping="Wrap"
+                   Text="聽說納豆對身體好,但是小光好怕納豆的味道喔!"
+                   FontSize="13.333" />
+    </Grid>
+</UserControl>

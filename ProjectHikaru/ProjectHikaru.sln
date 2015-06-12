@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Origin", "Origin", "{7F2C9851-A895-45FA-88C3-EF2100A857B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog_Stick", "Blog_Stick\Blog_Stick.csproj", "{EA42116D-0C91-480A-A2B0-3F38114361C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog_Stick.Web", "Blog_Stick.Web\Blog_Stick.Web.csproj", "{9CD47905-454D-462F-9247-0E3B01ED6B1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA42116D-0C91-480A-A2B0-3F38114361C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA42116D-0C91-480A-A2B0-3F38114361C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA42116D-0C91-480A-A2B0-3F38114361C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA42116D-0C91-480A-A2B0-3F38114361C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CD47905-454D-462F-9247-0E3B01ED6B1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD47905-454D-462F-9247-0E3B01ED6B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD47905-454D-462F-9247-0E3B01ED6B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD47905-454D-462F-9247-0E3B01ED6B1C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EA42116D-0C91-480A-A2B0-3F38114361C0} = {7F2C9851-A895-45FA-88C3-EF2100A857B0}
+		{9CD47905-454D-462F-9247-0E3B01ED6B1C} = {7F2C9851-A895-45FA-88C3-EF2100A857B0}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9CD47905-454D-462F-9247-0E3B01ED6B1C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Blog_Stick.Web</RootNamespace>
+    <AssemblyName>Blog_Stick.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SilverlightApplicationList>{EA42116D-0C91-480A-A2B0-3F38114361C0}|..\Blog_Stick\Blog_Stick.csproj|ClientBin|False</SilverlightApplicationList>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Blog_StickTestPage.aspx" />
+    <Content Include="Blog_StickTestPage.html" />
+    <Content Include="ClientBin\ap\ap01.jpg" />
+    <Content Include="ClientBin\ap\ap02.jpg" />
+    <Content Include="ClientBin\ap\ap03.jpg" />
+    <Content Include="ClientBin\ap\ap04.jpg" />
+    <Content Include="ClientBin\ap\ap05.jpg" />
+    <Content Include="ClientBin\ap\ap06.jpg" />
+    <Content Include="ClientBin\ap\ap07.jpg" />
+    <Content Include="ClientBin\ap\ap08.jpg" />
+    <Content Include="ClientBin\ap\ap09.jpg" />
+    <Content Include="ClientBin\ap\ap10.jpg" />
+    <Content Include="ClientBin\ap\ap11.jpg" />
+    <Content Include="ClientBin\ap\ap12.jpg" />
+    <Content Include="ClientBin\ap\ap13.jpg" />
+    <Content Include="ClientBin\ap\ap14.jpg" />
+    <Content Include="ClientBin\ap\ap15.jpg" />
+    <Content Include="ClientBin\ap\ap16.jpg" />
+    <Content Include="ClientBin\ap\ap17.jpg" />
+    <Content Include="ClientBin\ap\ap18.jpg" />
+    <Content Include="ClientBin\ap\ap19.jpg" />
+    <Content Include="ClientBin\ap\ap20.jpg" />
+    <Content Include="ClientBin\ap\morning01.jpg" />
+    <Content Include="ClientBin\ap\morning02.jpg" />
+    <Content Include="ClientBin\ap\night01.jpg" />
+    <Content Include="ClientBin\ap\night02.jpg" />
+    <Content Include="ClientBin\ap\noon01.jpg" />
+    <Content Include="ClientBin\ap\noon02.jpg" />
+    <Content Include="ClientBin\Blog_Stick.xap" />
+    <Content Include="ClientBin\clock\01.jpg" />
+    <Content Include="ClientBin\clock\02.jpg" />
+    <Content Include="ClientBin\clock\03.jpg" />
+    <Content Include="ClientBin\clock\04.jpg" />
+    <Content Include="ClientBin\clock\05.jpg" />
+    <Content Include="ClientBin\clock\06.jpg" />
+    <Content Include="ClientBin\clock\07.jpg" />
+    <Content Include="ClientBin\clock\08.jpg" />
+    <Content Include="ClientBin\clock\09.jpg" />
+    <Content Include="ClientBin\clock\10.jpg" />
+    <Content Include="ClientBin\clock\mins.jpg" />
+    <Content Include="ClientBin\clock\now.jpg" />
+    <Content Include="ClientBin\clock\time.jpg" />
+    <Content Include="Silverlight.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClientBin\Pockc.ttf" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>40783</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:40783/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

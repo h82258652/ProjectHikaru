@@ -1,0 +1,66 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+             mc:Ignorable="d"
+             x:Class="Blog_Stick.Blink"
+             d:DesignWidth="169"
+             d:DesignHeight="201">
+    <UserControl.Resources>
+        <Storyboard x:Name="眨眼"
+                    RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
+                                           Storyboard.TargetName="image">
+                <DiscreteDoubleKeyFrame KeyTime="0:0:3"
+                                        Value="1" />
+                <DiscreteDoubleKeyFrame KeyTime="0:0:3.1"
+                                        Value="0" />
+                <DiscreteDoubleKeyFrame KeyTime="0:0:3.2"
+                                        Value="1" />
+                <DiscreteDoubleKeyFrame KeyTime="0:0:3.3"
+                                        Value="0" />
+                <DiscreteDoubleKeyFrame KeyTime="0:0:4.8"
+                                        Value="1" />
+                <DiscreteDoubleKeyFrame KeyTime="0:0:4.9"
+                                        Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:5"
+                                      Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
+                                           Storyboard.TargetName="image2">
+                <DiscreteDoubleKeyFrame KeyTime="0:0:5"
+                                        Value="0" />
+                <DiscreteDoubleKeyFrame KeyTime="0:0:7"
+                                        Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+        <i:Interaction.Triggers>
+            <i:EventTrigger>
+                <ei:ControlStoryboardAction Storyboard="{StaticResource 眨眼}" />
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
+        <Image x:Name="image1"
+               Source="講話1.png"
+               Stretch="Fill" />
+        <Image x:Name="image"
+               Margin="32,42,33,95"
+               Source="眨眼.png"
+               Stretch="Fill"
+               Opacity="0" />
+        <Image x:Name="image2"
+               Height="23"
+               Margin="67,0,70,76"
+               Source="微笑.png"
+               Stretch="Fill"
+               VerticalAlignment="Bottom"
+               RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <CompositeTransform Rotation="8.451" />
+            </Image.RenderTransform>
+        </Image>
+    </Grid>
+</UserControl>
