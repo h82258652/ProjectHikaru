@@ -159,6 +159,7 @@ AppPackages/
 *.dbproj.schemaview
 *.pfx
 *.publishsettings
+*.xap
 node_modules/
 bower_components/
 
