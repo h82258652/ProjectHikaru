@@ -101,6 +101,7 @@
     <Content Include="ClientBin\clock\mins.jpg" />
     <Content Include="ClientBin\clock\now.jpg" />
     <Content Include="ClientBin\clock\time.jpg" />
+    <Content Include="ClientBin\Pockc.ttf" />
     <Content Include="Silverlight.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -108,7 +109,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ClientBin\Pockc.ttf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
