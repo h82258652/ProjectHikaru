@@ -61,6 +61,7 @@
   <ItemGroup>
     <Content Include="Blog_StickTestPage.aspx" />
     <Content Include="Blog_StickTestPage.html" />
+    <Content Include="ClientBin\ap\ap01.jpg" />
     <Content Include="ClientBin\ap\ap02.jpg" />
     <Content Include="ClientBin\ap\ap03.jpg" />
     <Content Include="ClientBin\ap\ap04.jpg" />
