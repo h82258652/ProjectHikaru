@@ -87,7 +87,6 @@
     <Content Include="ClientBin\ap\night02.jpg" />
     <Content Include="ClientBin\ap\noon01.jpg" />
     <Content Include="ClientBin\ap\noon02.jpg" />
-    <Content Include="ClientBin\Blog_Stick.xap" />
     <Content Include="ClientBin\clock\01.jpg" />
     <Content Include="ClientBin\clock\02.jpg" />
     <Content Include="ClientBin\clock\03.jpg" />
