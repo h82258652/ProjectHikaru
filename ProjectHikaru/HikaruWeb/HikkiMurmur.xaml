@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="HikaruWeb.HikkiMurmur"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:HikaruWeb">
+    <Grid x:Name="LayoutRoot">
+        <Image Source="ms-appx:/Images/background.jpg"
+               Stretch="Fill" />
+        <local:Speak x:Name="speak"
+                     Margin="0,0,-9,34"
+                     Height="201"
+                     Width="169"
+                     VerticalAlignment="Bottom"
+                     PointerPressed="Speak_PointerPressed" />
+        <local:Blink x:Name="blink"
+                     Margin="0,15,-9,34"
+                     HorizontalAlignment="Right"
+                     Width="169"
+                     Visibility="Collapsed" />
+        <HyperlinkButton NavigateUri="http://www.microsoft.com/taiwan/silverlight"
+                         Margin="0,4,0,0"
+                         VerticalAlignment="Top"
+                         Width="76"
+                         HorizontalAlignment="Center">
+            <Image Height="25"
+                   Source="ms-appx:/Images/logo.png"
+                   Stretch="Fill" />
+        </HyperlinkButton>
+        <local:Dialog x:Name="dialog"
+                      Height="67"
+                      Margin="7,0,5,6"
+                      VerticalAlignment="Bottom" />
+        <!--version information-->
+        <TextBlock VerticalAlignment="Bottom"
+                   HorizontalAlignment="Right"
+                   Text="ProjectHikaru beta 1"
+                   FontSize="12"
+                   Foreground="Gray" />
+        <!--hack for pointer pressed-->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="67" />
+                <RowDefinition Height="6" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" />
+            <Grid Grid.Row="1"
+                  x:Name="hyperLinkButtonZone"
+                  Width="76"
+                  PointerPressed="HyperLinkButtonZone_PointerPressed" />
+            <Grid Grid.Row="2"
+                  x:Name="speakZone"
+                  PointerPressed="SpeakZone_PointerPressed" />
+            <Grid Grid.Row="3"
+                  Margin="7,0,5,0" />
+            <Grid Grid.Row="4" />
+        </Grid>
+    </Grid>
+</UserControl>
