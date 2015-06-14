@@ -35,7 +35,10 @@ namespace HikaruWeb
         public HikkiMurmur()
         {
             this.InitializeComponent();
-            this.SetHikkiTalk(this.GetRandomSentence(0));
+            this.Loaded += delegate
+            {
+                this.SetHikkiTalk(this.GetRandomSentence(0));
+            };
             this.Murmur.Interval = new TimeSpan(0, 0, 15);
             this.Murmur.Tick += this.SetHikkiMurmur;
 #warning try fix in next CSHtml5 version
