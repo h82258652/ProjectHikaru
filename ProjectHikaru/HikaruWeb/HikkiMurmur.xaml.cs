@@ -59,7 +59,7 @@ namespace HikaruWeb
                 }
             };
 
-            this._dialogAnimateTimer.Interval = TimeSpan.FromSeconds(0.01d);
+            this._dialogAnimateTimer.Interval = TimeSpan.FromSeconds(0.02d);
             this._dialogAnimateTimer.Tick += this.DialogAnimateTimer_Tick;
         }
 
@@ -89,7 +89,7 @@ namespace HikaruWeb
 
         private void DialogAnimateTimer_Tick(object sender, object e)
         {
-            this._dialogAnimateElapsedSeconds += 0.01d;
+            this._dialogAnimateElapsedSeconds += 0.02d;
             if (this._dialogAnimateElapsedSeconds > 1.5d)
             {
                 this.DialogAnimateStop();
