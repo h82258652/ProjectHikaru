@@ -28,6 +28,8 @@ namespace HikaruWeb
             "注意身体不要感冒喔！现在感冒不容易好呢！"
         };
 
+        private double _dialogAnimateElapsedSeconds = 0.0d;
+        private DispatcherTimer _dialogAnimateTimer = new DispatcherTimer();
         private DispatcherTimer Murmur = new DispatcherTimer();
 
         public HikkiMurmur()
@@ -56,6 +58,60 @@ namespace HikaruWeb
                     domSpeakZone.style.cursor = "pointer";
                 }
             };
+
+            this._dialogAnimateTimer.Interval = TimeSpan.FromSeconds(0.01d);
+            this._dialogAnimateTimer.Tick += this.DialogAnimateTimer_Tick;
+        }
+
+        private void DialogAnimateStart()
+        {
+            this._dialogAnimateElapsedSeconds = 0.0d;
+            this._dialogAnimateTimer.Start();
+
+            if (CSharpXamlForHtml5.DomManagement.IsControlInVisualTree(this.dialog))
+            {
+                var domDialog = CSharpXamlForHtml5.DomManagement.GetDomElementFromControl(this.dialog);
+                domDialog.style.transform = "scale(0)";
+            }
+        }
+
+        private void DialogAnimateStop()
+        {
+            this._dialogAnimateTimer.Stop();
+            this._dialogAnimateElapsedSeconds = 0.0d;
+
+            if (CSharpXamlForHtml5.DomManagement.IsControlInVisualTree(this.dialog))
+            {
+                var domDialog = CSharpXamlForHtml5.DomManagement.GetDomElementFromControl(this.dialog);
+                domDialog.style.transform = "";
+            }
+        }
+
+        private void DialogAnimateTimer_Tick(object sender, object e)
+        {
+            this._dialogAnimateElapsedSeconds += 0.01d;
+            if (this._dialogAnimateElapsedSeconds > 1.5d)
+            {
+                this.DialogAnimateStop();
+                return;
+            }
+            this._dialogAnimateElapsedSeconds = Math.Round(this._dialogAnimateElapsedSeconds, 2);// 修正 javascript 浮点数精确度。
+
+            if (CSharpXamlForHtml5.DomManagement.IsControlInVisualTree(this.dialog))
+            {
+                double scale = 0.0d;
+                if (_dialogAnimateElapsedSeconds < 1.0d)
+                {
+                    scale = 0.0d;
+                }
+                if (_dialogAnimateElapsedSeconds >= 1.0d)
+                {
+                    scale = -4.83d * _dialogAnimateElapsedSeconds * _dialogAnimateElapsedSeconds + 13.507d * _dialogAnimateElapsedSeconds - 8.393d;
+                }
+
+                var domDialog = CSharpXamlForHtml5.DomManagement.GetDomElementFromControl(this.dialog);
+                domDialog.style.transform = "scale(" + scale + ")";
+            }
         }
 
         private string GetRandomSentence(int mode)
@@ -96,15 +152,12 @@ namespace HikaruWeb
 
             this.speak.SpeakAnimateStop();
 
-#warning try fix in next CSHtml5 version
-            // No scaleTransform now
-            // this.DialogAnimate.Stop();
+            this.DialogAnimateStop();
 
             this.dialog.Visibility = Visibility.Visible;
             this.dialog.SetHikkiSaysText(s);
 
-#warning try fix in next CSHtml5 version
-            // this.DialogAnimate.Begin();
+            this.DialogAnimateStart();
 
             speak.SpeakAnimateBegin();
 

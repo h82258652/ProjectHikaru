@@ -32,7 +32,7 @@
         <!--version information-->
         <TextBlock VerticalAlignment="Bottom"
                    HorizontalAlignment="Right"
-                   Text="ProjectHikaru beta 1"
+                   Text="ProjectHikaru beta 2"
                    FontSize="12"
                    Foreground="Gray" />
         <!--hack for pointer pressed-->

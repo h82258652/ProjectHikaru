@@ -5,8 +5,6 @@ namespace HikaruWeb
 {
     public sealed partial class Dialog : UserControl
     {
-        private DispatcherTimer _hookTextBlockTextWrappingTimer = new DispatcherTimer();
-
         public Dialog()
         {
             this.InitializeComponent();
