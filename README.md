@@ -1,2 +1,2 @@
 # ProjectHikaru
-Windows 10 蓝泽光应用程序
+蓝泽光系列应用程序
