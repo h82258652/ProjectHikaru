@@ -37,21 +37,21 @@
 
             var errMsg = "Silverlight 应用程序中未处理的错误 " + appSource + "\n";
 
-            errMsg += "代码: " + iErrorCode + "  \n";
-            errMsg += "类别: " + errorType + "    \n";
-            errMsg += "消息: " + args.ErrorMessage + "   \n";
+            errMsg += "代码: " + iErrorCode + "    \n";
+            errMsg += "类别: " + errorType + "       \n";
+            errMsg += "消息: " + args.ErrorMessage + "     \n";
 
             if (errorType == "ParserError") {
-                errMsg += "文件: " + args.xamlFile + "   \n";
-                errMsg += "行: " + args.lineNumber + "   \n";
-                errMsg += "位置: " + args.charPosition + "   \n";
+                errMsg += "文件: " + args.xamlFile + "     \n";
+                errMsg += "行: " + args.lineNumber + "     \n";
+                errMsg += "位置: " + args.charPosition + "     \n";
             }
             else if (errorType == "RuntimeError") {
                 if (args.lineNumber != 0) {
-                    errMsg += "行: " + args.lineNumber + "   \n";
-                    errMsg += "位置: " + args.charPosition + "   \n";
+                    errMsg += "行: " + args.lineNumber + "     \n";
+                    errMsg += "位置: " + args.charPosition + "     \n";
                 }
-                errMsg += "方法名称: " + args.methodName + "   \n";
+                errMsg += "方法名称: " + args.methodName + "     \n";
             }
 
             throw new Error(errMsg);
@@ -61,10 +61,9 @@
 <body>
     <form id="form1" runat="server" style="height: 100%">
         <div id="silverlightControlHost">
-            <object width="160" height="250" data="data:application/x-silverlight-2," type="application/x-silverlight-2">                
+            <object data="data:application/x-silverlight-2," type="application/x-silverlight-2" width="100%" height="100%">
                 <param name="source" value="ClientBin/Blog_Stick.xap" />
-                <param name="initparams" value="blogType=0"/>
-                <param name="EnableHtmlAccess" value="true"/>
+                <param name="initparams" value="blogType=1" />
                 <param name="onError" value="onSilverlightError" />
                 <param name="background" value="white" />
                 <param name="minRuntimeVersion" value="5.0.61118.0" />

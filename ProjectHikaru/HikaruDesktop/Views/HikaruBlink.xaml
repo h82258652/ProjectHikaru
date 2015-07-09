@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="HikaruDesktop.Views.HikaruBlink"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+             mc:Ignorable="d"
+             d:DesignWidth="169"
+             d:DesignHeight="201">
+    <UserControl.Resources>
+        <Storyboard x:Key="BlinkAnimate"
+                    RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="imgBlink"
+                                           Storyboard.TargetProperty="Opacity">
+                <DiscreteDoubleKeyFrame KeyTime="0:0:3"
+                                        Value="1" />
+                <DiscreteDoubleKeyFrame KeyTime="0:0:3.1"
+                                        Value="0" />
+                <DiscreteDoubleKeyFrame KeyTime="0:0:3.2"
+                                        Value="1" />
+                <DiscreteDoubleKeyFrame KeyTime="0:0:3.3"
+                                        Value="0" />
+                <DiscreteDoubleKeyFrame KeyTime="0:0:4.8"
+                                        Value="1" />
+                <DiscreteDoubleKeyFrame KeyTime="0:0:4.9"
+                                        Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:5"
+                                      Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="imgSmile"
+                                           Storyboard.TargetProperty="Opacity">
+                <DiscreteDoubleKeyFrame KeyTime="0:0:5"
+                                        Value="0" />
+                <DiscreteDoubleKeyFrame KeyTime="0:0:7"
+                                        Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <Grid>
+        <i:Interaction.Triggers>
+            <i:EventTrigger>
+                <ei:ControlStoryboardAction Storyboard="{StaticResource BlinkAnimate}" />
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
+        <Image x:Name="imgSpeak"
+               Source="/HikaruDesktop;component/Images/speak1.png"
+               Stretch="Fill" />
+        <Image x:Name="imgBlink"
+               Margin="32,42,33,95"
+               Source="/HikaruDesktop;component/Images/blink.png"
+               Stretch="Fill"
+               Opacity="0" />
+        <Image x:Name="imgSmile"
+               Height="23"
+               Margin="67,0,70,76"
+               Source="/HikaruDesktop;component/Images/smile.png"
+               Stretch="Fill"
+               VerticalAlignment="Bottom"
+               RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <RotateTransform Angle="8.451" />
+            </Image.RenderTransform>
+        </Image>
+    </Grid>
+</UserControl>

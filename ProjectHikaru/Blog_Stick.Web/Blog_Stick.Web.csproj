@@ -7,20 +7,19 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{9CD47905-454D-462F-9247-0E3B01ED6B1C}</ProjectGuid>
+    <ProjectGuid>{AAB6CACB-324F-4C59-8777-5E85218BC4EF}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Blog_Stick.Web</RootNamespace>
     <AssemblyName>Blog_Stick.Web</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <UseGlobalApplicationHostFile />
-    <SilverlightApplicationList>{EA42116D-0C91-480A-A2B0-3F38114361C0}|..\Blog_Stick\Blog_Stick.csproj|ClientBin|False</SilverlightApplicationList>
+    <SilverlightApplicationList>{0921186F-2D64-4425-A016-4FF372EBF6C2}|..\Blog_Stick\Blog_Stick.csproj|ClientBin|False</SilverlightApplicationList>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -101,7 +100,6 @@
     <Content Include="ClientBin\clock\mins.jpg" />
     <Content Include="ClientBin\clock\now.jpg" />
     <Content Include="ClientBin\clock\time.jpg" />
-    <Content Include="ClientBin\Pockc.ttf" />
     <Content Include="Silverlight.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -109,6 +107,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClientBin\Pockc.ttf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -130,7 +129,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>40783</DevelopmentServerPort>
+          <DevelopmentServerPort>33037</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:40783/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

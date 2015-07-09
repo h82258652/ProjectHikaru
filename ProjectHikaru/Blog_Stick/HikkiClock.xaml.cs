@@ -32,7 +32,7 @@ namespace Blog_Stick
             this._animate.Stop();
             using (MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(this.GetHelloASXString())))
             {
-               this.player.SetSource(stream);
+                this.player.SetSource(stream);
             }
             this.player.MediaEnded += player_clockTime;
             this.blink.Visibility = Visibility.Collapsed;

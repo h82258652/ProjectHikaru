@@ -33,7 +33,6 @@ namespace Blog_Stick
 
         private void fontDownloader_OpenReadCompleted(object sender, OpenReadCompletedEventArgs e)
         {
-#warning
             ((TextBlock)this.FindName("TimeText")).FontSource = new FontSource(e.Result);
             ((TextBlock)this.FindName("TimeText")).FontFamily = new FontFamily("Pocket Calculator");
         }
@@ -44,13 +43,10 @@ namespace Blog_Stick
             timer.Interval = new TimeSpan(0, 0, 1);
             timer.Tick += this.ClockTick_Tick;
             timer.Start();
-            //WebClient f = new WebClient();
-            //f.OpenReadAsync(new Uri("Blog_StickTestPage.aspx"));
-            //return;
 
             WebClient client = new WebClient();
             client.OpenReadCompleted += this.fontDownloader_OpenReadCompleted;
             client.OpenReadAsync(new Uri("Pockc.ttf", UriKind.Relative));
-        }        
+        }
     }
 }
