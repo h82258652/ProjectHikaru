@@ -9,15 +9,25 @@
              Width="160">
     <Grid>
         <MediaElement x:Name="player" />
-        <views:HikaruBlink Margin="0,15,-9,34"
+        <views:HikaruBlink x:Name="blink" Margin="0,15,-9,34"
                            HorizontalAlignment="Right"
                            Width="169"
                            Visibility="Visible"
-                           Cursor="Hand" />
-        <views:HikaruSpeak Margin="0,0,-9,34"
+                           Cursor="Hand"
+                           MouseLeftButtonUp="Blink_MouseLeftButtonUp"/>
+        <views:HikaruSpeak x:Name="speak"
+                           Margin="0,0,-9,34"
                            Height="201"
                            VerticalAlignment="Bottom"
                            Cursor="Hand" />
-        <views:Clock Cursor="Hand" HorizontalAlignment="Right" Height="44" Margin="0,0,6,5" VerticalAlignment="Bottom" Width="148" Visibility="Visible"/>
+        <views:Clock x:Name="clock"
+                     Cursor="Hand"
+                     HorizontalAlignment="Right"
+                     Height="44"
+                     Margin="0,0,6,5"
+                     VerticalAlignment="Bottom"
+                     Width="148"
+                     Visibility="Visible"
+                     MouseLeftButtonUp="Clock_MouseLeftButtonUp" />
     </Grid>
 </UserControl>
