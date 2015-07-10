@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="HikaruDesktop.Views.Clock"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="44"
+             d:DesignWidth="148">
+    <Grid>
+        <Image Source="/HikaruDesktop;component/Images/clock.png"
+               Stretch="Fill" />
+        <Image Source="/HikaruDesktop;component/Images/am.png"
+               HorizontalAlignment="Left"
+               Height="14"
+               Stretch="Fill"
+               VerticalAlignment="Top"
+               Width="26"
+               Margin="7,7,0,0" />
+        <Image Source="/HikaruDesktop;component/Images/pm.png"
+               Stretch="Fill"
+               Margin="7,0,0,5"
+               HorizontalAlignment="Left"
+               Width="26"
+               Height="14"
+               VerticalAlignment="Bottom"
+               Opacity="0.4" />
+        <TextBlock x:Name="txtTime"
+                   Margin="37,-2,0,-1"
+                   TextWrapping="Wrap"
+                   Text="00:00"
+                   Foreground="White"
+                   FontSize="50.667"
+                   FontFamily="/HikaruDesktop;component/Fonts/#Pocket Calculator" />
+    </Grid>
+</UserControl>

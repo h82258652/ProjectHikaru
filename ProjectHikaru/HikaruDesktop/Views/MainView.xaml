@@ -7,7 +7,14 @@
         Width="160"
         WindowStyle="None"
         AllowsTransparency="True"
-        Background="{x:Null}" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+        Background="{x:Null}"
+        MouseMove="Window_MouseMove"
+        ResizeMode="NoResize">
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="退出" Click="MnuExit_Click"/>
+        </ContextMenu>
+    </Window.ContextMenu>
     <Grid>
         <views:HikaruMurmur />
         <views:HikaruClock />

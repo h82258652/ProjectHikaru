@@ -15,18 +15,17 @@
                            Height="201"
                            VerticalAlignment="Bottom"
                            Cursor="Hand"
-                           MouseLeftButtonDown="Speak_MouseLeftButtonDown" />
+                           MouseLeftButtonUp="Speak_MouseLeftButtonUp" />
         <views:HikaruBlink x:Name="blink"
                            Margin="0,15,-9,34"
                            HorizontalAlignment="Right"
                            Width="169"
                            Visibility="Collapsed"
                            Cursor="Hand"
-                           MouseLeftButtonDown="Speak_MouseLeftButtonDown" />
+                           MouseLeftButtonUp="Speak_MouseLeftButtonUp" />
         <views:Dialog x:Name="dialog"
                       Height="67"
                       Margin="7,0,5,6"
                       VerticalAlignment="Bottom" />
-
     </Grid>
 </UserControl>

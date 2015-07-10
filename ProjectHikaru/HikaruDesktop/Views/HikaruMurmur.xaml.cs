@@ -103,7 +103,7 @@ namespace HikaruDesktop.Views
             };
         }
 
-        private void Speak_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Speak_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             this.SetHikaruTalk(this.GetRandomSentence(0));
         }
