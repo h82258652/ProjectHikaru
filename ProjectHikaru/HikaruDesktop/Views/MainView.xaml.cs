@@ -14,6 +14,21 @@ namespace HikaruDesktop.Views
         {
             this.InitializeComponent();
             this.LoadLocation();
+            this.LoadMode();
+        }
+
+        private void LoadMode()
+        {
+            if (AppConfig.Mode == 0)
+            {
+                hikaruMurmur.Visibility = Visibility.Visible;
+                hikaruClock.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                hikaruClock.Visibility = Visibility.Visible;
+                hikaruMurmur.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void LoadLocation()
@@ -55,6 +70,19 @@ namespace HikaruDesktop.Views
             {
                 this.DragMove();
             }
+        }
+
+        private void MnuSwitchMode_Click(object sender, RoutedEventArgs e)
+        {
+            if (AppConfig.Mode == 0)
+            {
+                AppConfig.Mode = 1;
+            }
+            else
+            {
+                AppConfig.Mode = 0;
+            }
+            this.LoadMode();
         }
     }
 }

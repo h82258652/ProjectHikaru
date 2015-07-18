@@ -9,16 +9,20 @@
         AllowsTransparency="True"
         Background="{x:Null}"
         MouseMove="Window_MouseMove"
-        ResizeMode="NoResize" LocationChanged="Window_LocationChanged">
+        ResizeMode="NoResize"
+        LocationChanged="Window_LocationChanged">
     <Window.ContextMenu>
         <ContextMenu>
-            <MenuItem Header="12" />
-            <MenuItem Header="12" Visibility="Collapsed" />
-            <MenuItem Header="退出" Click="MnuExit_Click"/>
+            <MenuItem Header="切换模式"
+                      Click="MnuSwitchMode_Click" />
+            <MenuItem Header="退出"
+                      Click="MnuExit_Click" />
         </ContextMenu>
     </Window.ContextMenu>
     <Grid>
-        <views:HikaruMurmur Visibility="Collapsed" />
-        <views:HikaruClock />
+        <views:HikaruMurmur x:Name="hikaruMurmur"
+                            Visibility="Visible" />
+        <views:HikaruClock x:Name="hikaruClock"
+                           Visibility="Collapsed" />
     </Grid>
 </Window>
