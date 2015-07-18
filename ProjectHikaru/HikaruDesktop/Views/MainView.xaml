@@ -9,14 +9,16 @@
         AllowsTransparency="True"
         Background="{x:Null}"
         MouseMove="Window_MouseMove"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize" LocationChanged="Window_LocationChanged">
     <Window.ContextMenu>
         <ContextMenu>
+            <MenuItem Header="12" />
+            <MenuItem Header="12" Visibility="Collapsed" />
             <MenuItem Header="退出" Click="MnuExit_Click"/>
         </ContextMenu>
     </Window.ContextMenu>
     <Grid>
-        <views:HikaruMurmur />
+        <views:HikaruMurmur Visibility="Collapsed" />
         <views:HikaruClock />
     </Grid>
 </Window>

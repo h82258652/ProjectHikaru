@@ -9,14 +9,14 @@
     <Grid>
         <Image Source="/HikaruDesktop;component/Images/clock.png"
                Stretch="Fill" />
-        <Image Source="/HikaruDesktop;component/Images/am.png"
+        <Image x:Name="am" Source="/HikaruDesktop;component/Images/am.png"
                HorizontalAlignment="Left"
                Height="14"
                Stretch="Fill"
                VerticalAlignment="Top"
                Width="26"
                Margin="7,7,0,0" />
-        <Image Source="/HikaruDesktop;component/Images/pm.png"
+        <Image x:Name="pm" Source="/HikaruDesktop;component/Images/pm.png"
                Stretch="Fill"
                Margin="7,0,0,5"
                HorizontalAlignment="Left"
