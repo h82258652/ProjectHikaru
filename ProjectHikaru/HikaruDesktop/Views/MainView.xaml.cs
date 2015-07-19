@@ -15,6 +15,12 @@ namespace HikaruDesktop.Views
             this.InitializeComponent();
             this.LoadLocation();
             this.LoadMode();
+            this.LoadTopmost();
+        }
+
+        private void LoadTopmost()
+        {
+            this.chkTopmost.IsChecked = AppConfig.Topmost;
         }
 
         private void LoadMode()
@@ -83,6 +89,18 @@ namespace HikaruDesktop.Views
                 AppConfig.Mode = 0;
             }
             this.LoadMode();
+        }
+
+        private void ChkTopmost_Checked(object sender, RoutedEventArgs e)
+        {
+            this.Topmost = true;
+            AppConfig.Topmost = true;
+        }
+
+        private void ChkTopmost_Unchecked(object sender, RoutedEventArgs e)
+        {
+            this.Topmost = false;
+            AppConfig.Topmost = false;
         }
     }
 }

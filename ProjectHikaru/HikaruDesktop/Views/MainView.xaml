@@ -13,6 +13,11 @@
         LocationChanged="Window_LocationChanged">
     <Window.ContextMenu>
         <ContextMenu>
+            <CheckBox x:Name="chkTopmost"
+                      Content="置顶"
+                      Checked="ChkTopmost_Checked"
+                      Unchecked="ChkTopmost_Unchecked"
+                      HorizontalAlignment="Stretch" />
             <MenuItem Header="切换模式"
                       Click="MnuSwitchMode_Click" />
             <MenuItem Header="退出"

@@ -68,6 +68,27 @@ namespace HikaruDesktop.Datas
             }
         }
 
+        public static bool Topmost
+        {
+            get
+            {
+                string topmost = ReadString("Topmost");
+                bool value;
+                if (bool.TryParse(topmost,out value))
+                {
+                    return value;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            set
+            {
+                WriteString("Topmost", value.ToString());
+            }
+        }
+
         private static bool WriteString(string key, string value)
         {
             try
