@@ -15,8 +15,10 @@
                      Margin="0,15,-9,34"
                      HorizontalAlignment="Right"
                      Width="169"
-                     Visibility="Collapsed" />
-        <HyperlinkButton NavigateUri="http://www.microsoft.com/taiwan/silverlight"
+                     Visibility="Collapsed" 
+                     PointerPressed="Speak_PointerPressed" />
+        <HyperlinkButton x:Name="hyperLink"
+                         NavigateUri="http://www.microsoft.com/taiwan/silverlight"
                          Margin="0,4,0,0"
                          VerticalAlignment="Top"
                          Width="76"
@@ -32,29 +34,8 @@
         <!--version information-->
         <TextBlock VerticalAlignment="Bottom"
                    HorizontalAlignment="Right"
-                   Text="ProjectHikaru beta 3"
+                   Text="ProjectHikaru beta 4"
                    FontSize="12"
                    Foreground="Gray" />
-        <!--hack for pointer pressed-->
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="4" />
-                <RowDefinition Height="25" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="67" />
-                <RowDefinition Height="6" />
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0" />
-            <Grid Grid.Row="1"
-                  x:Name="hyperLinkButtonZone"
-                  Width="76"
-                  PointerPressed="HyperLinkButtonZone_PointerPressed" />
-            <Grid Grid.Row="2"
-                  x:Name="speakZone"
-                  PointerPressed="SpeakZone_PointerPressed" />
-            <Grid Grid.Row="3"
-                  Margin="7,0,5,0" />
-            <Grid Grid.Row="4" />
-        </Grid>
     </Grid>
 </UserControl>

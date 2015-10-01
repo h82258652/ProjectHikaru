@@ -8,8 +8,8 @@
         <!-- change fontsize to suitable browser-->
         <TextBlock x:Name="HikkiSays"
                    Margin="4,25,0,-1"
-                   TextWrapping="NoWrap"
+                   TextWrapping="Wrap"
                    Text="听说纳豆对身体好，但是小光好怕纳豆的味道喔！"
-                   FontSize="12" />
+                   FontSize="12"/>
     </Grid>
 </UserControl>

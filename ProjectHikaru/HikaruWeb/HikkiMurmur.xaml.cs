@@ -42,23 +42,29 @@ namespace HikaruWeb
             this.Murmur.Interval = new TimeSpan(0, 0, 15);
             this.Murmur.Tick += this.SetHikkiMurmur;
 #warning try fix in next CSHtml5 version
-            // hack HyperLinkButton Cursor
-            this.hyperLinkButtonZone.Loaded += delegate
+            // hack Control Cursor
+            this.speak.Loaded += delegate
             {
-                if (CSharpXamlForHtml5.DomManagement.IsControlInVisualTree(this.hyperLinkButtonZone))
+                if (CSharpXamlForHtml5.DomManagement.IsControlInVisualTree(this.speak))
                 {
-                    var domHyperLinkButtonZone = CSharpXamlForHtml5.DomManagement.GetDomElementFromControl(this.hyperLinkButtonZone);
-                    domHyperLinkButtonZone.style.cursor = "pointer";
+                    var domSpeak = CSharpXamlForHtml5.DomManagement.GetDomElementFromControl(this.speak);
+                    domSpeak.style.cursor = "pointer";
                 }
             };
-#warning try fix in next CSHtml5 version
-            // hack Speak Cursor
-            this.speakZone.Loaded += delegate
+            this.blink.Loaded += delegate
             {
-                if (CSharpXamlForHtml5.DomManagement.IsControlInVisualTree(this.speakZone))
+                if (CSharpXamlForHtml5.DomManagement.IsControlInVisualTree(this.blink))
                 {
-                    var domSpeakZone = CSharpXamlForHtml5.DomManagement.GetDomElementFromControl(this.speakZone);
-                    domSpeakZone.style.cursor = "pointer";
+                    var domBlink = CSharpXamlForHtml5.DomManagement.GetDomElementFromControl(this.blink);
+                    domBlink.style.cursor = "pointer";
+                }
+            };
+            this.hyperLink.Loaded += delegate
+            {
+                if (CSharpXamlForHtml5.DomManagement.IsControlInVisualTree(this.hyperLink))
+                {
+                    var domHyperLink = CSharpXamlForHtml5.DomManagement.GetDomElementFromControl(this.hyperLink);
+                    domHyperLink.style.cursor = "pointer";
                 }
             };
 
@@ -134,13 +140,6 @@ namespace HikaruWeb
             }
         }
 
-        private void HyperLinkButtonZone_PointerPressed(object sender, PointerRoutedEventArgs e)
-        {
-#warning try fix in next CSHtml5 version
-            // hack zone for HyperLinkButton
-            JSIL.Verbatim.Expression("window.open(\"http://www.microsoft.com/taiwan/silverlight\");");
-        }
-
         private void SetHikkiMurmur(object sender, object e)
         {
             this.SetHikkiTalk(this.GetRandomSentence(1));
@@ -179,13 +178,6 @@ namespace HikaruWeb
         }
 
         private void Speak_PointerPressed(object sender, PointerRoutedEventArgs e)
-        {
-#warning try fix in next CSHtml5 version
-            // use hack zone do this now.
-            // see SpeakZone_PointerPressed
-        }
-
-        private void SpeakZone_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
             this.SetHikkiTalk(this.GetRandomSentence(0));
         }
